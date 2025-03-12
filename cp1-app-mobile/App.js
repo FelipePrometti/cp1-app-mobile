@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Text, TextInput, View, StyleSheet, Alert } from 'react-native';
+import { Button, Text, TextInput, View, StyleSheet, Alert, Image } from 'react-native';
  
 export default function App() {
   const [productName, setProductName] = useState('');
@@ -34,6 +34,7 @@ export default function App() {
  
   return (
 <View style={styles.container}>
+<Image source={require("./assets/png.png")} style={styles.imagem}></Image>
 <TextInput
         style={styles.input}
         placeholder="Nome do produto"
@@ -84,5 +85,12 @@ const styles = StyleSheet.create({
   resultadoText: {
     fontSize: 13,
     marginBottom: 5,
+  },
+  imagem: {
+    resizeMode: "contain",
+    width: 250,
+    height: 250,
+    marginLeft: 50,
+    backgroundColor: 'transparent',
   },
 });
